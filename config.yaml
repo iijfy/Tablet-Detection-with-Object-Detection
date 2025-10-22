@@ -1,0 +1,91 @@
+# ====================================
+# 1 config.yaml — Object Detection Project
+# ====================================
+
+project:
+  name: "Tablet-Detection" #이미지 파일수:1,489   Annotations수: 4,536
+  version: "1.0.0"
+  seed: 42
+  device: "cuda"        # or "cpu", "mps" (for Mac)
+  output_dir: "./outputs"
+  log_dir: "./logs"
+  save_checkpoint: true
+
+# ------------------------------------
+# 2. Dataset Configuration
+# ------------------------------------
+dataset:
+  train_images: "./datafile/train_images"
+  train_labels: "./dataset/train_labels"
+  val_images: "./dataset/val_images"
+  val_labels: "./dataset/val_labels"
+  num_classes: 73
+  input_size: 640  #원본이미지는 976 x 1280
+  train_ratio: 0.8
+  batch_size: 16
+  num_workers: 4
+  augmentations:
+    horizontal_flip: true
+    vertical_flip: false
+    rotation: 10
+    brightness: 0.1
+    contrast: 0.1
+
+# ------------------------------------
+# 3. Model Configuration
+# ------------------------------------
+model_1:
+  architecture: "yolov8"     
+  backbone: ""           
+  pretrained: False
+  dropout: 0.3
+  image_channels: 3
+
+model_2:
+  architecture: ""       
+  backbone: ""            
+  pretrained: 
+  dropout: 
+  image_channels: 
+
+# ------------------------------------
+# 4. Training Configuration
+# ------------------------------------
+train:
+  epochs: 50
+  optimizer: "AdamW"
+  learning_rate: 0.0005
+  weight_decay: 0.0001
+  lr_scheduler: "cosine"
+  warmup_epochs: 3
+  gradient_clip_norm: 5.0
+  mixed_precision: true
+  early_stopping_patience: 10
+
+# ------------------------------------
+# 5. Validation / Evaluation
+# ------------------------------------
+validation:
+  interval: 1
+  metrics:
+    - "mAP"
+    - "precision"
+    - "recall"
+  iou_threshold: 0.5, 0.
+
+# ------------------------------------
+# 6. Visualization / Logging
+# ------------------------------------
+visualization:
+  show_training_curves: true
+  show_predictions: false
+  save_bbox_images: true
+  ncols: 4.                        #화면에 보여지는 컬럼수
+
+# ------------------------------------
+# 7. Checkpoints
+# ------------------------------------
+checkpoint:
+  save_best_only: true
+  save_interval: 5
+  resume_from: null  # or path to checkpoint
