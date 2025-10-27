@@ -3,7 +3,7 @@ from collections import defaultdict
 
 PROJ = os.getcwd()
 CSV  = "yolo/annotations_all.csv"
-IMG_SRC = "/home/jayden86/datasets/ai05-level1-project/train_images"
+IMG_SRC = "/mnt/nas/jayde_code/datasets/ai05-level1-project/train_images"
 OUT = os.path.join(PROJ, "data/yolo")
 SPLIT = 0.8
 SEED = 42

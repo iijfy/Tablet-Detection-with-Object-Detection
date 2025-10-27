@@ -1,7 +1,7 @@
 # COCO(JSON) -> CSV (bbox + class + img_w/h까지)
 import os, json, glob, csv
 
-ANN_DIR = "/home/jayden86/datasets/ai05-level1-project/train_annotations"
+ANN_DIR = "/mnt/nas/jayde_code/datasets/ai05-level1-project/train_annotations"
 OUT_CSV = "yolo/annotations_all.csv"
 
 def parse_one(json_path):

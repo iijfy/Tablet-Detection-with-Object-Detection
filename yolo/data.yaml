@@ -1,6 +1,6 @@
-train: /home/jayden86/AI5_project/Tablet-Detection-with-Object-Detection/data/yolo/train
-val: /home/jayden86/AI5_project/Tablet-Detection-with-Object-Detection/data/yolo/val
-test: /home/jayden86/AI5_project/Tablet-Detection-with-Object-Detection/data/yolo/test
+train: /mnt/nas/jayde_code/Tablet-Detection-with-Object-Detection/data/yolo/train
+val: /mnt/nas/jayde_code/Tablet-Detection-with-Object-Detection/data/yolo/val
+test: /mnt/nas/jayde_code/Tablet-Detection-with-Object-Detection/data/yolo/test
 names:
 - 보령부스파정 5mg
 - 뮤테란캡슐 100mg
