@@ -14,7 +14,7 @@ def main():
         data=data,
         epochs=20,                # 10으로 빠르게 확인 후 50~150으로 확장 추천
         imgsz=640,
-        batch=4,                  # 8GB GPU 권장값
+        batch=8,                  # 8GB GPU 권장값
         workers=2,
         device=0,                 # CUDA:0
         project=save_root,

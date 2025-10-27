@@ -7,7 +7,7 @@ model: yolov8l.pt           # large 모델 사용
 data: yolo/data.yaml        # 네 프로젝트의 data.yaml
 imgsz: 640
 epochs: 20
-batch: 8
+batch: 4
 device: 0
 workers: 2
 pretrained: true
