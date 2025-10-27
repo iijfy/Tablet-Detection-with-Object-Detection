@@ -5,8 +5,8 @@ from ultralytics import YOLO
 
 def main():
     cwd = os.getcwd()
-    model_path = os.path.join(cwd, "yolo/runs/yolov8l_clean_v1/weights/best.pt")
-    test_dir = os.path.join(cwd, "/mnt/nas/jayde_code/datasets/ai05-level1-project/test_images")
+    model_path = os.path.join(cwd, "yolo/runs/yolov8l_clean_aug_v232/weights/best.pt")
+    test_dir = os.path.join(cwd, "/mnt/nas/jayden_code/ai05-level1-project/test_images")
     out_csv = os.path.join(cwd, "yolo/submission.csv")
 
     model = YOLO(model_path)
