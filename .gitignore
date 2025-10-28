@@ -1,1 +1,33 @@
 .DS_Store
+cat > .gitignore << 'EOF'
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+.venv/
+venv/
+env/
+*.env
+
+# ML 산출물/대용량
+runs/
+datasets/
+data/*.yaml
+wandb/
+*.pt
+*.pth
+*.onnx
+*.npz
+*.npy
+*.pkl
+*.h5
+*.csv
+*.jsonl
+
+# 편집기/OS
+.vscode/
+.idea/
+.DS_Store
+EOF
