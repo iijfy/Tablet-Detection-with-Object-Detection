@@ -37,6 +37,7 @@ datasets/
 # -----------------------------
 yolo/runs/
 yolo/weights/
+yolo/data_clean
 *.pt
 *.onnx
 *.engine
