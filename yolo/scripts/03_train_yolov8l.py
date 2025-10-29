@@ -12,7 +12,7 @@ def main():
         imgsz=768,
         device=0,                    # GPU 0번 사용
         project="yolo/runs",
-        name="yolov8l_baseline",
+        name="yolov8l_baseline_up1",
         workers=4,
         patience=30,                 # 성능 개선 없으면 조기종료
         seed=42,
