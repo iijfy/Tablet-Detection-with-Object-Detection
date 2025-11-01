@@ -1,0 +1,25 @@
+# retinanet_experiments/configs/retinanet.yaml
+paths:
+  img_root: /mnt/nas/jayden_code/ai05-level1-project/train_images   # 이미지 폴더 (존재해야 함)
+  train_ann: retinanet_experiments/data_coco/train.json             # 다음 단계에서 생성 예정(지금 없어도 정상)
+  val_ann:   retinanet_experiments/data_coco/val.json               # 다음 단계에서 생성 예정(지금 없어도 정상)
+  out_dir:   retinanet_experiments/outputs
+
+data:
+  num_classes: 146
+  batch_size: 2
+  workers: 2            # GPU/CPU 상황 보고 나중에 조절
+
+train:
+  epochs: 1             # 스모크(작동 확인)부터 1 epoch로 시작
+  lr: 0.0005
+  lr_steps: [8, 11]
+  weight_decay: 0.0001
+  amp: true             # 혼합정밀도 사용
+
+model:
+  backbone: resnet50
+  pretrained: true
+
+device: cuda            # CUDA 가능하면 자동 사용
+seed: 42
