@@ -16,6 +16,13 @@ runs/
 datasets/
 data/*.yaml
 wandb/
+yolo/data_clean/train/images
+yolo/data_clean/train/labels
+yolo/data_clean/val/images
+yolo/data_clean/val/labels
+yolo/visualized
+yolo/visualized_20251029_131257
+yolo/visualized_test
 *.pt
 *.pth
 *.onnx
@@ -31,3 +38,32 @@ wandb/
 .idea/
 .DS_Store
 EOF
+# ===== experiments / artifacts =====
+_archive/
+_archive_cleanup/
+retinanet_experiments/outputs/
+retinanet_experiments/checkpoints/
+runs/
+logs/
+*.log
+
+# ===== Python noise =====
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ===== Models / large =====
+*.pth
+*.pt
+
+# ===== VS Code =====
+.vscode/
+
+# ===== OS =====
+.DS_Store
+
+# ===== Data: keep JSON(cfg) but never commit images =====
+# (현재 이미지 루트는 NAS 경로라 레포엔 없지만, 혹시 생기면 막기)
+*/train_images/
+*/val_images/
+*/test_images/
