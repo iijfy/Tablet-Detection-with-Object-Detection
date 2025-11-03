@@ -93,3 +93,8 @@ desktop.ini
 # -----------------------------
 .ipynb_checkpoints/
 *.ipynb
+
+
+retinanet_experiments/outputs/
+_archive/
+_archive_cleanup/
