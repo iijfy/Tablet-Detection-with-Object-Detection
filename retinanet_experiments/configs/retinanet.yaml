@@ -1,0 +1,41 @@
+paths:
+  train_images: "yolo/data_clean/train/images"
+  train_labels: "yolo/data_clean/train/labels"
+  val_images: "yolo/data_clean/val/images"
+  val_labels: "yolo/data_clean/val/labels"
+  id_map: "dataset/id_map.csv"
+  test_id_map: "dataset/test_id_map.csv"
+  class_map: "yolo/metadata/class_map.csv"
+  out_dir: "retinanet_experiments/outputs/retinanet_resnet50_fpn_v2"
+
+data:
+  train_split: "train"
+  val_split: "val"
+  predict_split: "val"
+  hflip: true
+
+model:
+  num_classes: 146
+  pretrained: true
+  pretrained_backbone: true
+  trainable_backbone_layers: 3
+
+train:
+  seed: 42
+  device: "cuda"
+  epochs: 25
+  batch_size: 1
+  num_workers: 2
+  lr: 0.0005
+  weight_decay: 0.0001
+  optimizer: "adamw"
+  lr_steps: [16, 22]
+  lr_gamma: 0.1
+  clip_grad_norm: 0.0
+
+inference:
+  device: "cuda"
+  score_threshold: 0.05
+  max_detections: 300
+  batch_size: 1
+  num_workers: 4
