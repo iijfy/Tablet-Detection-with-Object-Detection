@@ -130,6 +130,7 @@ data/project/
 - [ ] 다국가 알약 DB 확장
 
 
-##📈 협업일지 링크: https://www.notion.so/292513a7d7a5802c9978c4317215d05f
+##✅ 협업일지 링크: https://www.notion.so/292513a7d7a5802c9978c4317215d05f
+##✅ 발표자료 링크: https://docs.google.com/presentation/d/1p0KDSR8E3O1xqBGfEDh7lOCh4f_pNWBsBHawtye8AkA/edit?slide=id.g1f87997393_0_782#slide=id.g1f87997393_0_782
 
 *🏥 Built with ❤️ by Kaggle Tablet Detection 6 Team*
